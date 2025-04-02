@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -11,7 +13,7 @@
 :root {
   /* Font Family */
   --primary-font: "Montserrat", sans-serif;
-  --secondary-font: "Lora", serif;
+  --secondary-font: Arial, Helvetica, sans-serif;
   --main-color: #9b111e;
   --secondry-color: #cbc9c7;
   --border-radias: 100px;
@@ -106,14 +108,14 @@ ul {
   padding: 5px 20px;
 }
 .navbar-brand img {
-  width: 50px;
+  width: 40px;
   border-radius: 50%;
 }
 .nav-link {
   color: black !important;
   font-weight: bold;
   font-family: var(--primary-font);
-  font-size: 16px;
+  font-size: 13px;
   text-decoration: none;
   padding: 10px 20px;
   margin: 0 5px;
@@ -142,6 +144,7 @@ ul {
   text-align: center;
   display: block;
   text-decoration: none;
+  font-size: 13px;
 
   position: relative;
   border-radius: 50px;
@@ -228,31 +231,44 @@ ul {
 /* nav bar css end */
 
 .hero-section {
-  background-image: url(./Group\ 1.png);
+  background: #410814;
 
-  background-size: cover;
-  background-position: center center;
+  background-image: url(./hero\ image.png);
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right bottom;
   display: flex;
   align-items: center;
   position: relative;
   height: 550px;
 }
+@media only screen and (max-width: 992px) {
+  .hero-section {
+    background-size: cover;
+  }
+}
 
 .hero-text {
-  margin-left: 80px;
+  margin-left: 60px;
   margin-top: 50px;
 }
 .hero-section h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
+
   font-weight: bold;
   color: #eee;
   font-family: var(--primary-font);
+  text-shadow: 20px 20px 40px black, 0 0 5px var(--main-color),
+    0 0 5px var(--main-color);
 }
 .hero-section p {
   font-size: 2rem;
   margin-left: 30px;
   color: #eee;
   font-family: var(--secondary-font);
+  text-shadow: 20px 20px 40px black, 0 0 5px var(--main-color),
+    0 0 5px var(--main-color);
 }
 
 .hero-icon {
@@ -354,7 +370,7 @@ ul {
 }
 
 .hero-icon ul li:nth-child(2) a:before {
-  background: #55acee;
+  background: #a70069;
 }
 
 .hero-icon ul li:nth-child(3) a:before {
